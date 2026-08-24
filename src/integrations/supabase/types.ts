@@ -14,6 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      notes: {
+        Row: {
+          approach: string
+          created_at: string
+          id: string
+          mistakes: string
+          problem_id: string
+          revision: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          approach?: string
+          created_at?: string
+          id?: string
+          mistakes?: string
+          problem_id: string
+          revision?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          approach?: string
+          created_at?: string
+          id?: string
+          mistakes?: string
+          problem_id?: string
+          revision?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      patterns: {
+        Row: {
+          blurb: string
+          created_at: string
+          id: string
+          name: string
+          position: number
+        }
+        Insert: {
+          blurb?: string
+          created_at?: string
+          id: string
+          name: string
+          position?: number
+        }
+        Update: {
+          blurb?: string
+          created_at?: string
+          id?: string
+          name?: string
+          position?: number
+        }
+        Relationships: []
+      }
       problem_completions: {
         Row: {
           created_at: string
@@ -34,6 +91,77 @@ export type Database = {
           id?: string
           pattern_id?: string
           problem_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      problems: {
+        Row: {
+          created_at: string
+          difficulty: string
+          id: string
+          number: number
+          pattern_id: string
+          position: number
+          title: string
+          url: string
+        }
+        Insert: {
+          created_at?: string
+          difficulty: string
+          id: string
+          number: number
+          pattern_id: string
+          position?: number
+          title: string
+          url: string
+        }
+        Update: {
+          created_at?: string
+          difficulty?: string
+          id?: string
+          number?: number
+          pattern_id?: string
+          position?: number
+          title?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "problems_pattern_id_fkey"
+            columns: ["pattern_id"]
+            isOneToOne: false
+            referencedRelation: "patterns"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      progress: {
+        Row: {
+          completed: boolean
+          created_at: string
+          id: string
+          pattern_id: string
+          problem_id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          completed?: boolean
+          created_at?: string
+          id?: string
+          pattern_id: string
+          problem_id: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          completed?: boolean
+          created_at?: string
+          id?: string
+          pattern_id?: string
+          problem_id?: string
+          updated_at?: string
           user_id?: string
         }
         Relationships: []

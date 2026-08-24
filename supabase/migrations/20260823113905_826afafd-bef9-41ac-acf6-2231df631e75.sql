@@ -1,0 +1,10 @@
+GRANT SELECT ON public.patterns TO anon, authenticated;
+GRANT ALL ON public.patterns TO service_role;
+GRANT SELECT ON public.problems TO anon, authenticated;
+GRANT ALL ON public.problems TO service_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.progress TO authenticated;
+GRANT ALL ON public.progress TO service_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.notes TO authenticated;
+GRANT ALL ON public.notes TO service_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.problem_completions TO authenticated;
+GRANT ALL ON public.problem_completions TO service_role;

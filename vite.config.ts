@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
-import { nitro } from "nitro/vite";
 
 export default defineConfig({
   plugins: [
@@ -11,11 +11,11 @@ export default defineConfig({
       projects: ["./tsconfig.json"],
     }),
     tailwindcss(),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart({
       // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
       server: { entry: "server" },
     }),
     viteReact(),
-    nitro({ config: { preset: "cloudflare_pages" } }),
   ],
 });

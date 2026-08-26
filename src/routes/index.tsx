@@ -9,7 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PatternDeck — Track 13 DSA Patterns" },
+      { title: "PatternDeck — Track DSA Patterns" },
       {
         name: "description",
         content:

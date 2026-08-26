@@ -20,10 +20,22 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "13 patterns, curated problems, and live progress tracking for DSA interviews.",
       },
+      // ✅ Theme colors
+      { name: "theme-color", content: "#ffffff", media: "(prefers-color-scheme: light)" },
+      { name: "theme-color", content: "#0f172a", media: "(prefers-color-scheme: dark)" },
+    ],
+    links: [
+      // ✅ Favicons
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
+      { rel: "icon", type: "image/svg+xml", sizes: "any", href: "/favicon.svg" },
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   component: Index,
 });
+
 
 function Index() {
   const [signedIn, setSignedIn] = useState(false);

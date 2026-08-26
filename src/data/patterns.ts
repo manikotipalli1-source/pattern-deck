@@ -36,17 +36,17 @@ const build = (id: string, name: string, blurb: string, prefix: string, raw: Raw
 
 export const patterns: Pattern[] = [
   build("arrays", "Basic Arrays", "Traversal, in-place tricks and index math.", "arr", [
-    [1, "Two Sum", "Easy", "two-sum"],
-    [121, "Best Time to Buy and Sell Stock", "Easy", "best-time-to-buy-and-sell-stock"],
-    [26, "Remove Duplicates from Sorted Array", "Easy", "remove-duplicates-from-sorted-array"],
-    [27, "Remove Element", "Easy", "remove-element"],
-    [66, "Plus One", "Easy", "plus-one"],
-    [88, "Merge Sorted Array", "Easy", "merge-sorted-array"],
-    [189, "Rotate Array", "Medium", "rotate-array"],
-    [238, "Product of Array Except Self", "Medium", "product-of-array-except-self"],
-    [31, "Next Permutation", "Medium", "next-permutation"],
-    [41, "First Missing Positive", "Hard", "first-missing-positive"],
-  ]),
+  [1920, "Build Array from Permutation", "Easy", "build-array-from-permutation"],
+  [1480, "Running Sum of 1d Array", "Easy", "running-sum-of-1d-array"],
+  [1929, "Concatenation of Array", "Easy", "concatenation-of-array"],
+  [485, "Max Consecutive Ones", "Easy", "max-consecutive-ones"],
+  [1295, "Find Numbers with Even Number of Digits", "Easy", "find-numbers-with-even-number-of-digits"],
+  [414, "Third Maximum Number", "Easy", "third-maximum-number"],
+  [977, "Squares of a Sorted Array", "Easy", "squares-of-a-sorted-array"],
+  [26, "Remove Duplicates from Sorted Array", "Easy", "remove-duplicates-from-sorted-array"],
+  [27, "Remove Element", "Easy", "remove-element"],
+  [88, "Merge Sorted Array", "Easy", "merge-sorted-array"],
+]),
   build("prefix-sum", "Prefix Sum", "Cumulative sums for O(1) range queries.", "ps", [
     [1480, "Running Sum of 1d Array", "Easy", "running-sum-of-1d-array"],
     [724, "Find Pivot Index", "Easy", "find-pivot-index"],
